@@ -46,6 +46,11 @@ class ScannerFragment : Fragment() {
         } else {
             startScanning()
         }
+
+        binding.scanAgainBtn.setOnClickListener {
+            codeScanner.startPreview()
+        }
+
         binding.shareResultButton.setOnClickListener {
             val sendIntent = Intent()
             sendIntent.action = Intent.ACTION_SEND
