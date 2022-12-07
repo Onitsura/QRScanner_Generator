@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ScannerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner"
+            android:layout_width="0dp"
+            android:layout_height="345dp"
+            app:autoFocusButtonColor="@color/colorSecondary"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@color/colorSecondary"
+            app:flashButtonVisible="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maskVisible="true" />
+
+        <TextView
+            android:id="@+id/scanResultView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:text="Result"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanner" />
+
+        <ImageButton
+            android:id="@+id/shareResultButton"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanResultView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

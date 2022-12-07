@@ -5,17 +5,18 @@ plugins {
 
 android {
     namespace 'com.onitsura12.qrscanner_generator'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.onitsura12.qrscanner_generator"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -30,11 +31,27 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+
+//    implementation 'androidx.camera:camera-camera2:1.1.0'
+//    implementation 'androidx.camera:camera-extensions:1.1.0'
+//    implementation 'androidx.camera:camera-lifecycle:1.1.0'
+//    implementation 'androidx.camera:camera-view:1.1.0'
+
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.google.zxing:core:3.4.1'
+
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -42,3 +59,44 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
