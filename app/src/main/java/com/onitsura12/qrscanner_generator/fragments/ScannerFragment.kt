@@ -56,6 +56,7 @@ class ScannerFragment : Fragment() {
         }
 
 
+
     }
 
     override fun onResume() {
@@ -93,7 +94,6 @@ class ScannerFragment : Fragment() {
         codeScanner.decodeCallback = DecodeCallback {
             activity.runOnUiThread {
                 binding.scanResultView.text = it.text
-                binding.scanResultView.isClickable = true
             }
         }
         scannerView.setOnClickListener {
