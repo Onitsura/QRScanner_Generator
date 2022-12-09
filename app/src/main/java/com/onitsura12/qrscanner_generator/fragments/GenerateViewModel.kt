@@ -38,19 +38,13 @@ class GenerateViewModel : ViewModel() {
     private fun randomColor(): Int {
         val random = Random
         val colors = arrayListOf(
-            Color.DKGRAY,
-            Color.BLUE,
-            Color.CYAN,
-            Color.WHITE,
-            Color.GREEN,
-            Color.RED,
-            Color.MAGENTA
+            Color.DKGRAY, Color.BLUE, Color.CYAN, Color.WHITE, Color.GREEN, Color.RED, Color.MAGENTA
         )
         val position = random.nextInt(colors.size)
         return colors[position]
     }
 
-    fun share(){
+    fun share() {
 
     }
 

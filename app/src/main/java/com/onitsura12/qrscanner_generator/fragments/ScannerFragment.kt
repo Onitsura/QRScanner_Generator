@@ -23,9 +23,8 @@ class ScannerFragment : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
         binding = FragmentScannerBinding.inflate(inflater)
         return binding.root
     }
@@ -34,14 +33,11 @@ class ScannerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val activity = requireActivity()
         if (ContextCompat.checkSelfPermission(
-                activity.applicationContext,
-                Manifest.permission.CAMERA
+                activity.applicationContext, Manifest.permission.CAMERA
             ) == PackageManager.PERMISSION_DENIED
         ) {
             ActivityCompat.requestPermissions(
-                requireActivity(),
-                arrayOf(Manifest.permission.CAMERA),
-                1
+                requireActivity(), arrayOf(Manifest.permission.CAMERA), 1
             )
         } else {
             startScanning()
@@ -97,6 +93,7 @@ class ScannerFragment : Fragment() {
         codeScanner.decodeCallback = DecodeCallback {
             activity.runOnUiThread {
                 binding.scanResultView.text = it.text
+                binding.scanResultView.isClickable = true
             }
         }
         scannerView.setOnClickListener {

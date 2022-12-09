@@ -31,23 +31,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding true
     }
 }
 
 dependencies {
 
-
+    //QR Scanner lib
     implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
 
-
-//    implementation 'androidx.camera:camera-camera2:1.1.0'
-//    implementation 'androidx.camera:camera-extensions:1.1.0'
-//    implementation 'androidx.camera:camera-lifecycle:1.1.0'
-//    implementation 'androidx.camera:camera-view:1.1.0'
-
-
+    //QR Generate
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     implementation 'com.google.zxing:core:3.4.1'
 

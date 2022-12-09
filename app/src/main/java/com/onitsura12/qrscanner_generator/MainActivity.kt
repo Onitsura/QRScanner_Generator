@@ -11,14 +11,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initGenerate()
         binding.apply {
-            btnFrgmGenerate.setOnClickListener{
+            btnFrgmGenerate.setOnClickListener {
                 initGenerate()
             }
             btnFrgmScan.setOnClickListener {
@@ -28,14 +27,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun initGenerate(){
+    private fun initGenerate() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frgm_cont, GeneratorFragment.newInstance())
             .commit()
     }
 
-    private fun initScanner(){
+    private fun initScanner() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frgm_cont, ScannerFragment.newInstance())
