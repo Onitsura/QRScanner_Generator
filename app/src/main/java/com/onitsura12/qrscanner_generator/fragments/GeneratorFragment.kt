@@ -57,7 +57,7 @@ class GeneratorFragment : Fragment() {
 
             }
 
-            binding.shareButton.setOnClickListener {
+            shareButton.setOnClickListener {
                 val icon: Bitmap = viewModel.bmpLive.value!!
                 val share = Intent(Intent.ACTION_SEND)
                 share.type = "image/jpeg"
